@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+
+<!-- Metaetiquetas requeridas-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+<!-- Tema de color para la barra de estado -->
+    <!-- <meta name="theme-color" content="#2196f3"> -->
+    <meta name="color-scheme" content="light dark">
+
+<!-- Titulo de tu appp -->
+    <title>Generala</title>
+<!-- Ruta al CSS de la biblioteca Framework7 -->
+    <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css">
+<!-- Ruta a sus iconos -->
+    <link rel="stylesheet" href="css/icons.css">
+<!--Ruta a sus estilos de aplicaciones personalizados-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="app">
+<!-- Statusbar overlay (Superposición de la barra de estado) -->
+        <div class="statusbar"></div>
+    
+<!-- Tu vista principal debe tener la clase "view-main" -->
+        <div class="view view-main">
+       
+        <!-- Top Navbar (barra de navegación superior)-->
+            <div class="navbar text-color-white">
+                <div class="navbar-bg"></div>
+                <div style="background-image:url(img/pano.jpg)" class="navbar-inner col">
+                    <!--<div class="left"><i class="icon icon-back"></i></div>-->
+                    <div class="title col-33">Generala Group V</div>
+                    <!--<div class="right"><i class="icon icon-forward"></i></div>-->
+                </div>
+            </div>
+    
+        <!-- Toolbar (barra de herramientas) -->
+            <div style="background-image:url(img/pano.jpg)" class="toolbar toolbar-bottom bg-color-teal text-color-white">
+                <div class="AlCentro toolbar-inner">
+                <!-- Toolbar links -->
+                    <p style="width: 37%; font-style: italic; padding: 0 0 0 3%;">Copyright Group "V"</p>
+                    <!--<a href="#" class="link"></a>-->
+                    <p class="text-align-center" style="width: 20%;"><a href="#" data-popup=".my-popup" class="popup-open">Reglas del Juego</a></p>                        
+                    <!--<a href="#" class="link"></a>-->
+                    <p class="text-align-center" style="width: 40%;"></p>
+                </div>
+            </div>
+        
+        <!-- Pagina solapada que se accede en About app -->
+            <div data-name="index" class="page">
+                <!-- Scrollable page content -->
+                <div style="background-image:url(img/pano.jpg)" class="page-content text-color-white">
+                    <div>
+                        <p></p>
+                        <input id="Jugador1" class="page-content" type="text" placeholder="Jugador 1" value="" />
+                        <br>
+                        <input id="Jugador2" class="page-content" type="text" placeholder="Jugador 2" value="" /><br><br>
+                        <p></p>
+        <!-- Enlace a otra página -->
+                        <div class="col-33">
+                            <button class="bg-color-teal button button-fill EsteeselBoton" id="Jugar">Jugar!!!</button>
+                        </div>
+                    </div>
+    <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
+    <!-- En el atributo de ventana emergente de datos, especificamos el selector CSS de la ventana emergente que necesitamos abrir -->
+                    <!-- And somewhere in DOM (Y en algún lugar de DOM) -->
+                        <div class="popup my-popup">
+                            <div class="view">
+                                <div class="page">
+                                    <div class="navbar">
+                                        <div class="navbar-bg"></div>
+                                        <div class="navbar-inner">
+                                            <div class="title">Reglas de la Generala</div>
+                                            <div class="right">
+                                                <!-- Link to close popup -->
+                                                <a class="link popup-close">Cerrar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page-content demo-card-header-pic">
+                                        <div style="background-image:url(img/pano.jpg)" class="card-header text-color-white">
+                                            <h2 class="block">Reglas Generala</h2>
+                                            <div class="page-content tabs-swipeable-wrap">
+                                          <p class="block">
+                                          Es un juego de dados, dónde en cada turno cada jugador tira 5 (cinco) dados, de ellos puede elegir todos o algunos y volver a tirar, en esta segunda tirada puede apartar los más convenientes y juntarlos con los que ya tenía apartados y luego tirará el resto por tercera y última con lo que termina la tirada. La mano puede ser Servida (S) si se logra en un solo tiro o Armada (A) si se logra en hasta 3 tiros</p>
+                                            
+                                            <h4 class="block">Generala Doble:</h4><p class="block"> 60 ptos si se logra formar dos generalas en dos tiros de tres.</p>
+                                            <h4 class="block">Generala:</h4><p class="block"> 50 ptos (S) y 45 ptos (A) si se logran 5 dados iguales en hasta tres tiradas</p>
+                                            <h4 class="block">Póker:</h4><p class="block"> 45 ptos (S) y 40 ptos (A) 4 dados iguales y 1 distinto</p>
+                                            <h4 class="block">Full:</h4><P class="block"> 35 ptos (S) y 30 ptos (A) 3 dados iguales y 2 iguales</P>
+                                            <h4 class="block">Escalera:</h4><p class="block"> 25 ptos (S) y 20 ptos (A) con todos los dados se forma una escalera del 1 a 5 (Escalera Menor),  del 2 al 6 o de 3 al 1 (Escalera Mayor).</p>
+                                            <p class="block">Para calcular el puntaje correspondiente a una categoría de números del 1 al 6, se deben sumar los números iguales.</p>
+                                            <p></p><br><br><br><br>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </div>-->
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
